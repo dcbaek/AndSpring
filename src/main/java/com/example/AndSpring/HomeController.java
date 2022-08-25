@@ -7,11 +7,11 @@ import org.springframework.web.bind.annotation.*;
 @Controller
 public class HomeController {
 
-    @PostMapping(value = "/android")
     @ResponseBody
+    @PostMapping(value = "/android")
     public String androidResponse(@RequestBody User user) {
 
-        log.info("info log = {}", user);
+        log.info("username = {}, password = {}", user.getId(), user.getPassword());
 
         return "ok";
     }
