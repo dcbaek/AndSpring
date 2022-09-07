@@ -19,8 +19,8 @@ bin/
 
 ### IntelliJ IDEA ###
 
-application.proferties
-hanait_kro_kr.jks
+**/application.proferties
+**/hanait_kro_kr.jks
 
 .idea
 *.iws
