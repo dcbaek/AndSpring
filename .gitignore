@@ -18,6 +18,9 @@ bin/
 !**/src/test/**/bin/
 
 ### IntelliJ IDEA ###
+application.proferties
+hanait_kro_kr.jks
+
 .idea
 *.iws
 *.iml
