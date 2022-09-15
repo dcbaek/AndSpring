@@ -7,7 +7,6 @@ import javax.persistence.*;
 
 @Getter
 @Setter
-@Table(name = "pulse")
 @Entity
 public class Pulse {
 

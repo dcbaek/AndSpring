@@ -7,7 +7,6 @@ import javax.persistence.*;
 
 @Getter
 @Setter
-@Table(name = "temperature")
 @Entity
 public class Temperature {
 
