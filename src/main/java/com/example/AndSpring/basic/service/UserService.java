@@ -17,14 +17,13 @@ public class UserService {
     private JpaUserRepository jpaUserRepository;
 
     public List<User> findAll() {
-        List<User> users = new ArrayList<>();
-        jpaUserRepository.findAll().forEach(e -> users.add(e));
-        return users;
+        //List<User> users = new ArrayList<>(jpaUserRepository.findAll());
+        return new ArrayList<>(jpaUserRepository.findAll());
     }
 
     public Optional<User> findById(Long userId) {
-        Optional<User> user = jpaUserRepository.findById(userId);
-        return user;
+        //Optional<User> user = jpaUserRepository.findById(userId);
+        return jpaUserRepository.findById(userId);
     }
 
     public void deleteById(Long userId) {

@@ -31,10 +31,26 @@ public class UserController {
         return "ok";
     }
 
-    @PostMapping(value = "/body-data")
-    public String androidData(@RequestBody User user, Pulse pulse, Temperature temperature, Bloodsugar bloodsugar) {
-        log.info("pulseData = {}, temperatureData = {}, bloodsugarData = {}"
-                , pulse.getPulseData(), temperature.getTemperatureData(), bloodsugar.getBloodsugarData());
+    @PostMapping(value = "/pulse-data")
+    public String androidPulseData(@RequestBody Pulse pulse) {
+        log.info("pulseData = {}"
+                , pulse.getPulseData());
+
+        return "ok";
+    }
+
+    @PostMapping(value = "/temperature-data")
+    public String androidTemperatureData(@RequestBody Temperature temperature) {
+        log.info("temperatureData = {}"
+                , temperature.getTemperatureData());
+
+        return "ok";
+    }
+
+    @PostMapping(value = "/bloodsugar-data")
+    public String androidBloodsugarData(@RequestBody Bloodsugar bloodsugar) {
+        log.info("bloodsugarData = {}"
+                , bloodsugar.getBloodsugarData());
 
         return "ok";
     }
