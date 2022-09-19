@@ -13,7 +13,7 @@ import java.util.Optional;
 
 @Service
 public class UserService {
-    
+
     private JpaUserRepository jpaUserRepository;
 
     public List<User> findAll() {

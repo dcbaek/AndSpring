@@ -21,20 +21,19 @@ import java.util.Optional;
 @RestController
 public class UserController {
 
-    @Autowired
     UserService userService;
 
     @PostMapping(value = "/android")
     public String androidResponse(@RequestBody User user) {
 
-        log.info("id = {}, password = {}", user.getUserName(), user.getUserPhone());
+        log.info("userName = {}, userPassword = {}", user.getUserName(), user.getUserPassword());
 
         return "ok";
     }
 
     @PostMapping(value = "/body-data")
     public String androidData(@RequestBody User user, Pulse pulse, Temperature temperature, Bloodsugar bloodsugar) {
-        log.info("pulse_data = {}, temperature_data = {}, blood_sugar_data = {}"
+        log.info("pulseData = {}, temperatureData = {}, bloodsugarData = {}"
                 , pulse.getPulseData(), temperature.getTemperatureData(), bloodsugar.getBloodsugarData());
 
         return "ok";
