@@ -14,8 +14,8 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long userId;
 
-    private String userName;
-    private String userPassword;
+    private String username;
+    private String password;
     private String userBirth;
     private int userPhone;
     private String userCreate;
@@ -25,10 +25,10 @@ public class User {
     public User() {
     }
 
-    public User(Long userId, String userName, String userPassword, String userBirth, int userPhone, String userCreate, String userUpdate, String authId) {
+    public User(Long userId, String username, String password, String userBirth, int userPhone, String userCreate, String userUpdate, String authId) {
         this.userId = userId;
-        this.userName = userName;
-        this.userPassword = userPassword;
+        this.username = username;
+        this.password = password;
         this.userBirth = userBirth;
         this.userPhone = userPhone;
         this.userCreate = userCreate;

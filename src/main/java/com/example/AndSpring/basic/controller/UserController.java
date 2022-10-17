@@ -21,12 +21,13 @@ import java.util.Optional;
 @RestController
 public class UserController {
 
+    @Autowired
     UserService userService;
 
     @PostMapping(value = "/android")
     public String androidResponse(@RequestBody User user) {
 
-        log.info("userName = {}, userPassword = {}", user.getUserName(), user.getUserPassword());
+        log.info("username = {}, password = {}", user.getUsername(), user.getPassword());
 
         return "ok";
     }
